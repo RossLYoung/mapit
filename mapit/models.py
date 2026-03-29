@@ -451,7 +451,7 @@ class PostcodeQuerySet(models.QuerySet):
             WHERE area_id = %s'''
         query = '''
 WITH target AS %s ( %s )
-SELECT "mapit_postcode"."id", "mapit_postcode"."postcode", "mapit_postcode"."location"::bytea
+SELECT "mapit_postcode"."id", "mapit_postcode"."postcode", "mapit_postcode"."location"
   FROM mapit_postcode, target
  WHERE ST_CoveredBy(location, target.division)
  %s
