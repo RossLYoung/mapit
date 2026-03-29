@@ -57,6 +57,10 @@ setup(
         'Shapely',
         'uk-postcode-utils',
     ],
+    extras_require={
+        'psycopg2': ['psycopg2'],
+        'psycopg3': ['psycopg'],
+    },
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
