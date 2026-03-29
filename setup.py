@@ -58,7 +58,7 @@ setup(
         'uk-postcode-utils',
     ],
     extras_require={
-        'psycopg', ['psycopg'],
+        'psycopg': ['psycopg'],
     },
     classifiers=[
         'Development Status :: 5 - Production/Stable',
