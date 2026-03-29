@@ -18,9 +18,8 @@ from mapit.middleware import ViewException
 
 
 def materialized():
-    version = connection.cursor().connection.server_version
     materialized = ''
-    if version >= 120000:
+    if connection.pg_version >= 120000:
         materialized = 'MATERIALIZED'
     return materialized
 
